@@ -1,21 +1,233 @@
-/* *,
-*::before,
-*::after {
-  box-sizing: custom-border;
-  margin: 0;
-  padding: 0;
-} */
 
 
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Petit+Formal+Script&display=swap');
 
-#container {
-    display:flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    height:90vh;
-    border: solid black 2px;
-    padding: 5px;
+.petit-formal-script-regular {
+  font-family: "Petit Formal Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.commissioner-site {
+  font-family: "Commissioner", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "FLAR" 0,
+    "VOLM" 0;
+}
+
+.site-title {
+  display: flex;
+  flex-direction: row;
+  margin-left:10px;
+  
+  color:#003B36;
+  font-family: 'Commissioner';
+  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.3);
 
 }
 
+.site-title:hover {
+  text-shadow: none;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+  color:#ECE5F0;
+  background-color:#012622;
+  margin:0px;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Special Elite';
+  color:#BBACC1;
+}
+
+nav {
+  position:sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  background-color:#ECE5F0;
+}
+
+.nav-links {
+display: flex;
+list-style: none;
+flex-direction: row;
+text-decoration: none;
+}
+
+li {
+  padding: 5px;
+  
+}
+
+li a {
+  text-decoration: none;
+  font-family: 'Special Elite';
+  color:#59114D;
+  padding: 5px;
+}
+
+li a:hover {
+  font-weight: 700;
+  color:#E98A15;
+  
+}
+
+.intro-container {
+  background-image: url('winter_background.jpg');
+  background-size:cover;
+  background-position: center;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.about-container {
+  background-image: url('winter_background.jpg');
+  background-size:cover;
+  background-position: center;
+  height:100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-card {
+  display: grid;
+  grid-template-columns: 260px 300px 350px;
+  /* grid-template-rows:500px; */
+  background-color: #eae6e0;
+  /* width: 750px; */
+  height:400px;
+  border-style: double;
+  border-color: #b8abad;
+  border-width: 5px;
+  justify-content: center;
+  align-self: center;
+  
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+    /* justify-content: center; */
+  /* align-items: center; */
+  background-color: #eae6e0;
+  width: 750px;
+  height:700px;
+  border-style: double;
+  border-color: #b8abad;
+  border-width: 5px;
+
+}
+
+.intro-name {
+  grid-column: 2;
+  font-family: 'Petit Formal Script';
+  font-size: 30px;
+  font-weight: 700;
+  color:#012622;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+ justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container-title {
+  grid-column: 2;
+  font-family: 'Petit Formal Script';
+  font-size: 30px;
+  font-weight: 700;
+  color:#012622;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+ justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container-subtitle {
+  display: block;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  font-weight: 200;
+  color:#012622;
+  text-align: left;
+  margin-left: 35px;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+    /* justify-content: center; */
+  /* align-items: center; */
+  background-color: #eae6e0;
+  width: 750px;
+  height:750px;
+  overflow-y:auto;
+  border-style: double;
+  border-color: #b8abad;
+  border-width: 5px;
+  padding-right: 30px;
+
+}
+
+.section-title {
+  /* grid-column: 2; */
+  font-family: 'Petit Formal Script';
+  font-size: 25px;
+  font-weight: 700;
+  color:#012622;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+ justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.intro-font {
+  font-family: 'Petit Formal Script';
+  font-size: 30px;
+  font-weight: 700;
+  color:#012622;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+span {
+  display: inline-block;
+}
+
+h4 {
+  margin:0px;
+  font-weight: 700;
+  font-style: italic;
+}
+
+h6 {
+  margin:0px;
+  font-weight: 200;
+}
+
+
+
+
+
+#footer {
+  padding:10px;
+}
