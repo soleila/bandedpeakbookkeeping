@@ -16,7 +16,9 @@
 
 let blogName = "Banded Peak Bookkeeping";
 let authorName = "Leila Amrouche";
+let copyRight = "© 2026 Banded Peak Bookkeeping All rights reserved."
 let authorLink = "mailto:leila@bandedpeakbookkeeping.com"; // Enter your website, social media, etc. Some way for people to tell you they like your blog! (Leaving it empty is okay too)
+
 
 //-----------------------------
 
@@ -66,7 +68,17 @@ let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></l
 
 //Generate the Footer HTML, which uses the variables defined in the BASIC INFO section above to list info about the site.
 //Note: feel free to remove the references to Zonelets and Neocities! Just be careful not to delete any necessary HTML closing tags or other syntax.
-let footerHTML = "<hr><p>" + blogName + " is coded and designed by <a href='" + authorLink + "'>" + authorName + "</a> and hosted by <a href='https://github.com/'>GitHub.</a></p>";
+// let footerHTML = "<hr><p>" + blogName + " is a Canadian-owned bookkeeping firm focused on providing small businesses with accurate, reliable, and flexible bookkeeping services.</p>" + copyRight;
+
+let footerHTML = `
+  <hr class="full-hr">
+  <p>${blogName} is a Canadian-owned bookkeeping firm focused on providing small businesses with accurate, reliable, and flexible bookkeeping services.</p>
+  <br>
+  <p id="copyRight">${copyRight}</p>
+`;
+
+
+
 
 //To do the following stuff, we want to know where we are in the posts array (if we're currently on a post page).
 let currentIndex = -1;
@@ -220,6 +232,10 @@ if (document.getElementById("postDate")) {
 }
 if (document.getElementById("footer")) {
   document.getElementById("footer").innerHTML = footerHTML;
+}
+
+if (document.getElementById("copyRight")) {
+  document.getElementById("copyRight").classList.add("highlight");
 }
 
 //Dynamically set the HTML <title> tag from the postTitle variable we created earlier
