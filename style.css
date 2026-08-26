@@ -8,26 +8,13 @@
   font-style: normal;
 }
 
-.commissioner-site {
-  font-family: "Commissioner", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "FLAR" 0,
-    "VOLM" 0;
-}
-
 .site-title {
   display: flex;
   flex-direction: row;
   margin-left:10px;
-  
   color:#003B36;
-  font-family: 'Commissioner';
-  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.3);
-
+  font-family:monospace;
+  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .site-title:hover {
@@ -132,6 +119,7 @@ li a:hover {
   background-color: #eae6e0;
   width: 750px;
   height:700px;
+  overflow-y: auto;
   border-style: double;
   border-color: #b8abad;
   border-width: 5px;
@@ -139,20 +127,23 @@ li a:hover {
 }
 
 .intro-name {
+  display: flex;
+  flex-direction: column;
   grid-column: 2;
-  font-family: 'Petit Formal Script';
+  grid-row: 1;
+  font-family: monospace;
   font-size: 30px;
   font-weight: 700;
   color:#012622;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
- justify-items: center;
+ justify-content: center;
   align-items: center;
   text-align: center;
 }
 
 .container-title {
   grid-column: 2;
-  font-family: 'Petit Formal Script';
+  font-family: monospace;
   font-size: 30px;
   font-weight: 700;
   color:#012622;
@@ -229,5 +220,99 @@ h6 {
 
 
 #footer {
-  padding:10px;
+  padding:5px;
+  margin: 0;
+}
+
+/* ------------------------------ */
+/* MOBILE RESPONSIVE ADJUSTMENTS */
+/* ------------------------------ */
+
+@media (max-width: 768px) {
+
+  /* NAVIGATION */
+  nav {
+    flex-direction: row;
+    padding: 0px;
+    position:static;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-self: flex-end;
+  }
+
+  /* INTRO + ABOUT SECTIONS */
+  .intro-container,
+  .about-container {
+    height: auto;              /* allow natural height */
+    padding: 20px 0;
+    background-size: cover;
+  }
+
+  /* INTRO CARD GRID → STACKED */
+  .intro-card {
+    display: flex;             /* switch from grid to flex */
+    flex-direction: column;
+    width: 70%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .grid-3 {
+    display: none;
+  }
+
+
+
+  .intro-name,
+  .container-title {
+    font-size: 24px;
+    grid-column: auto;         /* remove grid placement */
+    text-align: center;
+    padding:20px;
+  }
+
+  .container-subtitle {
+    font-size: 20px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+
+  /* ABOUT + SERVICE CARDS */
+  .about-card,
+  .service-card {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    overflow-y: visible;        /* remove scroll on mobile */
+  }
+
+  /* GENERAL TYPOGRAPHY */
+  h4 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 14px;
+  }
+
+  .intro-font {
+    font-size: 24px;
+  }
+
+  /* SITE TITLE */
+  .site-title {
+    font-size: 20px;
+    margin-left: 7px;
+    padding: 0;
+  }
+
+  /* LISTS */
+  li {
+    padding: 3px;
+  }
 }
