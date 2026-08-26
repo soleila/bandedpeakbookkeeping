@@ -106,12 +106,8 @@ li a:hover {
 }
 
 .intro-card {
-  display: grid;
-  grid-template-columns: 375x 375px;
-  /* grid-template-rows:500px; */
+  display: flex;
   background-color: #eae6e0;
-  /* width: 750px; */
-  /* height:400px; */
   border-style: double;
   border-color: #b8abad;
   border-width: 5px;
