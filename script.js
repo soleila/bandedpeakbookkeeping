@@ -227,3 +227,7 @@ if (document.getElementById("footer")) {
 if (document.title === "Blog Post") {
   document.title = currentPostTitle;
 }
+
+document.querySelector('.back-to-top').addEventListener('click', () => {
+  document.getElementById('containerTop').scrollIntoView({ behavior: 'smooth' });
+});

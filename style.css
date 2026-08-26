@@ -2,11 +2,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Petit+Formal+Script&display=swap');
 
+
+
 .petit-formal-script-regular {
   font-family: "Petit Formal Script", cursive;
   font-weight: 400;
   font-style: normal;
 }
+
+
 
 .site-title {
   display: flex;
@@ -90,10 +94,12 @@ li a:hover {
   background-image: url('winter_background.jpg');
   background-size:cover;
   background-position: center;
-  height:100vh;
+  /* height:100vh; */
   display: grid;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
+  height:85vh;
 }
 
 .intro-card {
@@ -123,6 +129,7 @@ li a:hover {
   border-style: double;
   border-color: #b8abad;
   border-width: 5px;
+  margin-top:30px
 
 }
 
@@ -170,13 +177,34 @@ li a:hover {
   /* align-items: center; */
   background-color: #eae6e0;
   width: 750px;
+  max-width: 100%;
   height:750px;
   overflow-y:auto;
+  overflow-x: hidden;
   border-style: double;
   border-color: #b8abad;
   border-width: 5px;
   padding-right: 30px;
+  margin-top: 30px;
+  box-sizing: border-box;
 
+}
+
+
+.service-card li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.service-card * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    padding-right: 10px;
+  }
 }
 
 .section-title {
@@ -217,11 +245,19 @@ h6 {
 
 
 
-
+.full-hr {
+    grid-column: 2;
+  width: 80%;
+  padding: 0 20px;
+}
 
 #footer {
   padding:5px;
   margin: 0;
+}
+
+#footer > p {
+  margin:0px;
 }
 
 /* ------------------------------ */
@@ -289,6 +325,10 @@ h6 {
     height: auto;
     padding: 20px;
     overflow-y: visible;        /* remove scroll on mobile */
+    justify-self: center;
+    align-self: center;
+    margin: 10px;
+    
   }
 
   /* GENERAL TYPOGRAPHY */
@@ -298,6 +338,7 @@ h6 {
 
   h6 {
     font-size: 14px;
+    text-align: left;
   }
 
   .intro-font {
@@ -315,4 +356,18 @@ h6 {
   li {
     padding: 3px;
   }
+}
+
+.back-to-top {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  font-family: 'Special Elite';
+  color: #59114D;
+  font-size: 16px;
+}
+
+.back-to-top:hover {
+  color: #E98A15;
+  font-weight: 700;
 }
