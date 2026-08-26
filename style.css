@@ -107,7 +107,7 @@ li a:hover {
 
 .intro-card {
   display: grid;
-  grid-template-columns: 260px 300px 350px;
+  grid-template-columns: 375x 375px;
   /* grid-template-rows:500px; */
   background-color: #eae6e0;
   /* width: 750px; */
