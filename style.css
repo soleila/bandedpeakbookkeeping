@@ -10,6 +10,9 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 .site-title {
@@ -99,7 +102,7 @@ li a:hover {
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
-  height:85vh;
+  /* height:fit-content; */
 }
 
 .intro-card {
@@ -108,12 +111,13 @@ li a:hover {
   /* grid-template-rows:500px; */
   background-color: #eae6e0;
   /* width: 750px; */
-  height:400px;
+  /* height:400px; */
   border-style: double;
   border-color: #b8abad;
   border-width: 5px;
   justify-content: center;
   align-self: center;
+  padding: 30px;
   
 }
 
@@ -124,12 +128,13 @@ li a:hover {
   /* align-items: center; */
   background-color: #eae6e0;
   width: 750px;
-  height:700px;
+  /* height:700px; */
   overflow-y: auto;
   border-style: double;
   border-color: #b8abad;
   border-width: 5px;
-  margin-top:30px
+  margin-top:30px;
+  box-sizing: border-box;
 
 }
 
@@ -178,7 +183,7 @@ li a:hover {
   background-color: #eae6e0;
   width: 750px;
   max-width: 100%;
-  height:750px;
+  /* height:750px; */
   overflow-y:auto;
   overflow-x: hidden;
   border-style: double;
@@ -327,7 +332,7 @@ h6 {
     overflow-y: visible;        /* remove scroll on mobile */
     justify-self: center;
     align-self: center;
-    margin: 10px;
+    /* margin: 10px; */
     
   }
 
