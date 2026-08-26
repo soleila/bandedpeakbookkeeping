@@ -88,8 +88,9 @@ li a:hover {
   background-position: center;
   height:100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-self:center;
+  align-items: start;
   
 }
 
@@ -97,8 +98,19 @@ li a:hover {
   background-image: url('winter_background.jpg');
   background-size:cover;
   background-position: center;
+  height:90vh;
+  display: flex;
+  flex-direction: column;
+  justify-self:center;
+  align-items: start;
+}
+
+.service-container {
+  background-image: url('winter_background.jpg');
+  background-size:cover;
+  background-position: center;
   /* height:100vh; */
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
@@ -114,14 +126,15 @@ li a:hover {
   justify-content: center;
   align-self: center;
   padding: 30px;
+  margin: 150px;
   
 }
 
 .about-card {
   display: flex;
   flex-direction: column;
-    /* justify-content: center; */
-  /* align-items: center; */
+  justify-self: center;
+  align-self: center;
   background-color: #eae6e0;
   width: 750px;
   /* height:700px; */
